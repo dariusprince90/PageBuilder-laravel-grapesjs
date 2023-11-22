@@ -93,7 +93,11 @@
                     data: data,
                     success: function(result) {
                         if (result) {
-                            localStorage.removeItem('key');
+                            localStorage.removeItem('gjs-components');
+                            localStorage.removeItem('gjs-html');
+                            localStorage.removeItem('gjs-css');
+                            localStorage.removeItem('gjs-assets');
+                            localStorage.removeItem('gjs-styles');
                             alert('The new website is created successfully !!!');
                             window.location.href = '{{ route('website.index') }}';
                         }
